@@ -1,0 +1,65 @@
+Steps
+(1) Create Project Directory
+
+(2) Install Django
+	- C:\user_name> pip install django
+
+(3) Install MYSQL
+	- C:\user_name> pip install mysql
+	- C:\user_name> pip install mysql-connector
+	- C:\user_name> pip install mysql-connector-python
+
+(4) Create Django Project
+	- C:\user_name\Project_Dir> django-admin startproject ydsccrm(Project_Name) 
+	
+(5) Create App in ydsccrm Project
+	- C:\user_name\Project_Dir\ydsccrm> python manage.py startapp ydscweb(App_Name)
+
+(6) Add App in Settings.py 
+	INSTALLED_APP = ['ydscweb',] - Refer CRM Projects settings.py
+
+(7) Add Database details in DATABASES = {.........} - Refer CRM Projects settings.py
+
+(8) Create DB file to create database - - Refer CRM Projects ydscdb.py
+	RUN ydscdb.py
+		- C:\user_name\Project_Dir\ydsccrm> python ydscdb.py
+			ERROR RAISED
+		Uninstall and Re-install the above packages as below:
+			- C:\user_name> pip install mysql-connector-python
+			- C:\user_name> pip install mysql-connector
+				RE-INSTALL
+					- C:\user_name> pip install mysql-connector-python
+						Result: ALL DONE!!
+		- Check and Confirm in MYSQL Workbench weather its created DB or not by refreshing the Schemas
+
+(9) Database migrations RUN Below cmd's
+	- C:\user_name\Project_Dir\ydsccrm> python manage.py migrate
+	- C:\user_name\Project_Dir\ydsccrm> python manage.py createsuperuser
+		- Check and Confirm in MYSQL Workbench weather its created DB or not by refreshing the Schemas
+	- C:\user_name\Project_Dir\ydsccrm> python manage.py runserver
+		- Check and Confirm in Browser weather the Django Project Working or NOT
+(10) Install git on system
+	- Check the installation by below cmd's
+		- C:\user_name\> git version
+	- git cmd's in VS Code
+		- C:\user_name\> git config --global user.name "yuvikadsc"
+		- C:\user_name\> git config --global user.email "yuvikadsc111021@gmail.com"
+		- C:\user_name\> git config --global push.default matching
+		- C:\user_name\> git config --global alias.co checkout
+		- C:\user_name\> git init
+			Initialized empty Git repository in D:/Software Build/Python/Projects/CRM/.git/
+		- C:\user_name\Project_Dir\ydsccrm> git add .
+		- C:\user_name\Project_Dir\ydsccrm> git commit -am 'Initial Commit'
+		- C:\user_name\Project_Dir\ydsccrm> 
+		
+		
+(11)
+(12)
+(13)
+(14)
+(15)
+(16)
+(17)
+(18)
+(19)
+(20)
